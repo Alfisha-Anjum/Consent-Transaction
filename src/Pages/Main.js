@@ -1,5 +1,6 @@
 import React from "react";
 import { FaSearch } from "react-icons/fa";
+import { FaInfoCircle } from "react-icons/fa";
 
 const operationsData = [
   { account: "GBCG", operation: "Pay 38 Pi to GCPF", time: "16 minutes ago" },
@@ -63,16 +64,54 @@ const operationsData = [
 ];
 
 const transactionsData = [
-  { id: 1, block: "0102a72...", ops: 1, time: "6 minutes ago" },
-  { id: 2, block: "5e34676...", ops: 1, time: "6 minutes ago" },
-  { id: 3, block: "6bf173f...", ops: 1, time: "5 minutes ago" },
-  { id: 4, block: "80bc3a9...", ops: 1, time: "5 minutes ago" },
-  { id: 5, block: "93e9f75...", ops: 1, time: "5 minutes ago" },
-  { id: 6, block: "54e6a1a...", ops: 1, time: "5 minutes ago" },
-  { id: 7, block: "7e90a7a...", ops: 1, time: "5 minutes ago" },
-  { id: 8, block: "cf5d8ff...", ops: 1, time: "5 minutes ago" },
-  { id: 9, block: "a43a4cb...", ops: 1, time: "5 minutes ago" },
-  { id: 10, block: "26f0ce7...", ops: 1, time: "6 minutes ago" },
+  {
+    id: 1,
+    "#": "c997734...",
+    block: "c997734",
+    ops: 1,
+    time: "35 seconds ago",
+  },
+  {
+    id: 2,
+    "#": "7dad8a7...",
+    block: "7dad8a7",
+    ops: 1,
+    time: "35 seconds ago",
+  },
+  {
+    id: 3,
+    "#": "337f96f...",
+    block: "337f96f",
+    ops: 1,
+    time: "45 seconds ago",
+  },
+  {
+    id: 4,
+    "#": "c9cd930...",
+    block: "c9cd930",
+    ops: 1,
+    time: "55 seconds ago",
+  },
+  { id: 5, "#": "83b68b1...", block: "83b68b1", ops: 1, time: "1 minute ago" },
+  { id: 6, "#": "089e5e8...", block: "089e5e8", ops: 1, time: "1 minute ago" },
+  { id: 7, "#": "4cb6d10...", block: "4cb6d10", ops: 1, time: "1 minute ago" },
+  { id: 8, "#": "27238d0...", block: "27238d0", ops: 1, time: "1 minute ago" },
+  { id: 9, "#": "dfd046b...", block: "dfd046b", ops: 1, time: "1 minute ago" },
+  { id: 10, "#": "2c1b73b...", block: "2c1b73b", ops: 1, time: "1 minute ago" },
+  {
+    id: 11,
+    "#": "16832137...",
+    block: "16832137",
+    ops: "0",
+    time: "1 minute ago",
+  },
+  {
+    id: 12,
+    "#": "16832136...",
+    block: "16832136",
+    ops: 1,
+    time: "1 minute ago",
+  },
 ];
 
 const blocksData = [
@@ -95,34 +134,36 @@ const Main = () => {
         <div className="bg-blue-950 w-full h-16"></div>
 
         <div className=" bg-[#eeeeec]">
-          <div className="w-[75%] bg-[#eeeeec] m-auto h-full">
-            <div className="flex items-center justify-between pr-28">
-              <span></span>
-              <div className="bg-white h-10 rounded-3xl flex p-3 w-[600px] mt-10">
+          <div className="w-[80%] bg-[#eeeeec] h-[1200px] m-auto">
+            <div className="flex items-center justify-end pr-28 gap-2 pt-10">
+              <div className="bg-white h-10 rounded-3xl flex p-3 w-[600px]">
                 <input
                   type="text"
                   placeholder="Search by Account / Transaction /..."
-                  className="w-full font-semibold"
+                  className="w-full font-semibold outline-none"
                 />
                 <FaSearch className="text-gray-700" />
               </div>
+              <FaInfoCircle className="text-2xl" />
             </div>
             <div className="flex gap-5 w-full">
-              <div className="bg-white w-[616px] h-[970px] rounded-md mt-5">
+              <div className="bg-white w-[58%] h-[700px] rounded-md mt-5">
                 <div className="flex items-center justify-between p-3">
                   <h1 className="text-lg font-semibold">Latest Operations</h1>
-                  <h1 className="text-red-700 text-lg">View All</h1>
+                  <h1 className="text-red-400 font-semibold text-lg">
+                    View All
+                  </h1>
                 </div>
                 <div className="flex w-full justify-between px-7 py-1 my-1">
                   <div className="flex gap-20">
-                    <h1 className="text-gray-500 font-semibold text-md">
+                    <h1 className="text-gray-400 font-semibold text-sm">
                       Accounts
                     </h1>
-                    <h1 className="text-gray-500 font-semibold text-md">
+                    <h1 className="text-gray-400 font-semibold text-sm">
                       Operation
                     </h1>
                   </div>
-                  <h1 className="text-gray-500 font-semibold text-md pr-36">
+                  <h1 className="text-gray-400 font-semibold text-sm pr-36">
                     Time
                   </h1>
                 </div>
@@ -130,16 +171,16 @@ const Main = () => {
 
                 {operationsData.map((operation, index) => (
                   <div key={index}>
-                    <div className="flex w-full justify-between px-7 py-1 my-1">
+                    <div className="flex w-full justify-between px-7 py-1 ">
                       <div className="flex gap-20">
-                        <div className="bg-[#a34ea7] font-semibold text-white rounded-full px-4 py-1">
+                        <div className="bg-[#a34ea7]  text-white rounded-full px-2">
                           {operation.account}
                         </div>
-                        <h1 className="text-gray-500 font-semibold text-md">
+                        <h1 className="text-gray-500  text-[13px] ">
                           {operation.operation}
                         </h1>
                       </div>
-                      <h1 className="text-gray-500 font-semibold text-md pr-20 hover:text-[#fbb44a]">
+                      <h1 className="text-blue-700  text-sm pr-20 hover:text-[#fbb44a]">
                         {operation.time}
                       </h1>
                     </div>
@@ -148,26 +189,26 @@ const Main = () => {
                 ))}
               </div>
               <div className="flex flex-col">
-                <div className="bg-white w-[380px] h-[200px] rounded-md mt-5">
+                <div className="bg-white w-full h-[200px] rounded-md mt-5">
                   <div className="flex items-center justify-between p-3">
                     <h1 className="text-md font-semibold">MAINNET METRICS</h1>
                   </div>
                   <div className="mt-2">
                     <hr className="w-[90%] m-auto" />
                     <div className="flex w-[90%] justify-between my-3 m-auto">
-                      <h1 className="text-gray-500 font-semibold text-[14px]">
+                      <h1 className="text-gray-800  text-[14px]">
                         Total Migrated Mining Rewards:
                       </h1>
-                      <h1 className="text-gray-500 font-semibold text-sm">
+                      <h1 className="text-gray-800  text-sm">
                         4036138806.1613917
                       </h1>
                     </div>
                     <hr className="w-[90%] m-auto" />
                     <div className="flex w-[90%] justify-between my-3 m-auto">
-                      <h1 className="text-gray-500 font-semibold text-[14px]">
+                      <h1 className="text-gray-800  text-[14px]">
                         Total Migrated Mining Rewards:
                       </h1>
-                      <h1 className="text-gray-500 font-semibold text-sm">
+                      <h1 className="text-gray-800  text-sm">
                         4036138806.1613917
                       </h1>
                     </div>
@@ -179,19 +220,22 @@ const Main = () => {
                     <h1 className="text-lg font-semibold">
                       Latest Transactions
                     </h1>
-                    <h1 className="text-red-700 text-lg">View All</h1>
+                    <h1 className="text-red-400 font-semibold text-lg">
+                      View All
+                    </h1>
                   </div>
-                  <div className="grid grid-cols-4">
-                    <h1 className="text-gray-500 font-semibold text-md pl-4">
+
+                  <div className="flex gap-4 py-1">
+                    <h1 className="text-gray-500 font-semibold text-sm w-[100px] pl-4">
                       #
                     </h1>
-
-                    <h1 className="text-gray-500 font-semibold text-md">
+                    <h1 className="text-gray-500 font-semibold text-sm w-[100px]">
                       Block
                     </h1>
-
-                    <h1 className="text-gray-500 font-semibold text-md">Ops</h1>
-                    <h1 className="text-gray-500 font-semibold text-md ">
+                    <h1 className="text-gray-500 font-semibold text-sm w-[50px]">
+                      Ops
+                    </h1>
+                    <h1 className="text-gray-500 font-semibold text-sm w-[120px]">
                       Time
                     </h1>
                   </div>
@@ -199,19 +243,18 @@ const Main = () => {
                   <hr className="w-[90%] m-auto" />
 
                   {transactionsData.map((transaction, index) => (
-                    <div key={index} className="w-[90%] m-auto">
-                      <div className="grid grid-cols-4 mt-3">
-                        <h1 className="text-gray-500 font-semibold text-[12px] pb-1">
-                          {transaction.id}
+                    <div key={index} className="w-[100%] m-auto">
+                      <div className="flex  pl-4 py-1">
+                        <h1 className="text-blue-700 text-sm w-[100px]">
+                          {transaction["#"]}
                         </h1>
-                        <h1 className="text-gray-500 font-semibold text-[12px]">
+                        <h1 className="text-blue-700 text-sm w-[100px]">
                           {transaction.block}
                         </h1>
-
-                        <h1 className="text-gray-500 font-semibold text-[12px]  hover:text-[#fbb44a]">
+                        <h1 className="text-blue-700 text-sm w-[50px]">
                           {transaction.ops}
                         </h1>
-                        <h1 className="text-gray-500 font-semibold text-[12px] hover:text-[#fbb44a]">
+                        <h1 className="text-blue-700 text-sm w-[120px] hover:text-[#fbb44a]">
                           {transaction.time}
                         </h1>
                       </div>
@@ -219,22 +262,23 @@ const Main = () => {
                     </div>
                   ))}
                 </div>
-                {/* 
-                <div className=" w-full flex">
-                  <div className="bg-white w-[90%] h-[970px] rounded-md mt-5">
+
+                <div className=" w-full">
+                  <div className="bg-white w-[380px] h-[400px] rounded-md mt-5">
                     <div className="flex items-center justify-between p-3">
                       <h1 className="text-lg font-semibold">Latest Blocks</h1>
-                      <h1 className="text-red-700 text-lg">View All</h1>
+                      <h1 className="text-red-400 font-semibold text-lg">
+                        View All
+                      </h1>
                     </div>
                     <div className="grid grid-cols-3">
-                      <div className="flex gap-20">
-                        <h1 className="text-gray-500 font-semibold text-md">
-                          #
-                        </h1>
-                        <h1 className="text-gray-500 font-semibold text-md">
-                          Transactions
-                        </h1>
-                      </div>
+                      <h1 className="text-gray-500 font-semibold text-md pl-4">
+                        #
+                      </h1>
+                      <h1 className="text-gray-500 font-semibold text-md">
+                        Transactions
+                      </h1>
+
                       <h1 className="text-gray-500 font-semibold text-md pr-36">
                         Time
                       </h1>
@@ -243,16 +287,15 @@ const Main = () => {
 
                     {blocksData.map((block, index) => (
                       <div key={index}>
-                        <div className="grid grid-cols-3">
-                          <div className="flex gap-20">
-                            <h1 className="text-gray-500 font-semibold text-md">
-                              {block.id}
-                            </h1>
-                            <h1 className="text-gray-500 font-semibold text-md">
-                              {block.transactions}
-                            </h1>
-                          </div>
-                          <h1 className="text-gray-500 font-semibold text-md pr-20 hover:text-[#fbb44a]">
+                        <div className="grid grid-cols-3 mt-3">
+                          <h1 className="text-gray-500 font-semibold text-[12px] pl-4">
+                            {block.id}
+                          </h1>
+                          <h1 className="text-gray-500 font-semibold text-[12px]">
+                            {block.transactions}
+                          </h1>
+
+                          <h1 className="text-gray-500 font-semibold text-[12px] hover:text-[#fbb44a]">
                             {block.time}
                           </h1>
                         </div>
@@ -260,7 +303,7 @@ const Main = () => {
                       </div>
                     ))}
                   </div>
-                </div> */}
+                </div>
               </div>
             </div>
           </div>
