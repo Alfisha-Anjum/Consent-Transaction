@@ -1,10 +1,11 @@
 import "./App.css";
 import Main from "./Pages/Main";
-
+import Transaction from "./Pages/Transaction";
 function App() {
   return (
     <div>
-      <Main />
+      
+      <Transaction/>
     </div>
   );
 }
