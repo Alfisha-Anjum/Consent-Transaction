@@ -219,7 +219,7 @@ const Main = () => {
                     </div>
                   ))}
                 </div>
-
+                {/* 
                 <div className=" w-full flex">
                   <div className="bg-white w-[90%] h-[970px] rounded-md mt-5">
                     <div className="flex items-center justify-between p-3">
@@ -260,7 +260,7 @@ const Main = () => {
                       </div>
                     ))}
                   </div>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
