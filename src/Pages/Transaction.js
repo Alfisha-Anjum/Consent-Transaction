@@ -19,7 +19,7 @@ function Transaction() {
                 </div>
 
                 <div className='w-full flex p-4 bg-white'>
-                    <h1> tansaction <span>xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</span></h1>
+                    <h1> tansaction <span></span></h1>
                 </div>
 
             </div>
