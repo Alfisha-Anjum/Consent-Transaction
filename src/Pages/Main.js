@@ -131,26 +131,26 @@ const Main = () => {
   return (
     <>
       <div>
-        <div className="bg-blue-950 w-full h-16"></div>
+        <div className="bg-blue-950 w-full h-20"></div>
 
         <div className=" bg-[#eeeeec]">
           <div className="w-[80%] bg-[#eeeeec] h-[1200px] m-auto">
-            <div className="flex items-center justify-end pr-28 gap-2 pt-10">
-              <div className="bg-white h-10 rounded-3xl flex p-3 w-[600px]">
+            <div className="flex  items-center justify-end pr-28 gap-2 pt-3">
+              <div className="bg-white  rounded-full flex  px-4 py-[3px]  w-[65%]">
                 <input
                   type="text"
                   placeholder="Search by Account / Transaction /..."
-                  className="w-full font-semibold outline-none"
+                  className="w-full font-semibold outline-none text-[12px]"
                 />
-                <FaSearch className="text-gray-700" />
+                <FaSearch className="text-gray-700 mt-[2px] text-sm" />
               </div>
-              <FaInfoCircle className="text-2xl" />
+              <FaInfoCircle className="text-lg" />
             </div>
             <div className="flex gap-5 w-full">
               <div className="bg-white w-[58%] h-[700px] rounded-md mt-5">
-                <div className="flex items-center justify-between p-3">
-                  <h1 className="text-lg font-semibold">Latest Operations</h1>
-                  <h1 className="text-red-400 font-semibold text-lg">
+                <div className="flex items-center justify-between px-5 py-3">
+                  <h1 className="text-md font-semibold">Latest Operations</h1>
+                  <h1 className="text-red-400 font-semibold text-md">
                     View All
                   </h1>
                 </div>
@@ -189,8 +189,8 @@ const Main = () => {
                 ))}
               </div>
               <div className="flex flex-col">
-                <div className="bg-white w-full h-[200px] rounded-md mt-5">
-                  <div className="flex items-center justify-between p-3">
+                <div className="bg-white w-full h-[170px] rounded-md mt-5">
+                  <div className="flex items-center justify-between px-5 py-3">
                     <h1 className="text-md font-semibold">MAINNET METRICS</h1>
                   </div>
                   <div className="mt-2">
@@ -216,11 +216,11 @@ const Main = () => {
                   </div>
                 </div>
                 <div className="bg-white w-[380px] h-[450px] rounded-md mt-5 m-auto">
-                  <div className="w[-[90%] flex items-center justify-between p-3">
-                    <h1 className="text-lg font-semibold">
+                  <div className="w[-[90%] flex items-center justify-between px-5 py-3">
+                    <h1 className="text-md font-semibold">
                       Latest Transactions
                     </h1>
-                    <h1 className="text-red-400 font-semibold text-lg">
+                    <h1 className="text-red-400 font-semibold text-md">
                       View All
                     </h1>
                   </div>
@@ -264,10 +264,10 @@ const Main = () => {
                 </div>
 
                 <div className=" w-full">
-                  <div className="bg-white w-[380px] h-[400px] rounded-md mt-5">
-                    <div className="flex items-center justify-between p-3">
-                      <h1 className="text-lg font-semibold">Latest Blocks</h1>
-                      <h1 className="text-red-400 font-semibold text-lg">
+                  <div className="bg-white w-[380px] h-[430px] rounded-md mt-5">
+                    <div className="flex items-center justify-between px-5 py-3">
+                      <h1 className="text-md font-semibold">Latest Blocks</h1>
+                      <h1 className="text-red-400 font-semibold text-md">
                         View All
                       </h1>
                     </div>
@@ -288,14 +288,14 @@ const Main = () => {
                     {blocksData.map((block, index) => (
                       <div key={index}>
                         <div className="grid grid-cols-3 mt-3">
-                          <h1 className="text-gray-500 font-semibold text-[12px] pl-4">
+                          <h1 className="text-blue-700  text-sm pl-4">
                             {block.id}
                           </h1>
-                          <h1 className="text-gray-500 font-semibold text-[12px]">
+                          <h1 className="text-gray-500  text-sm">
                             {block.transactions}
                           </h1>
 
-                          <h1 className="text-gray-500 font-semibold text-[12px] hover:text-[#fbb44a]">
+                          <h1 className="text-gray-500  text-sm hover:text-[#fbb44a]">
                             {block.time}
                           </h1>
                         </div>
