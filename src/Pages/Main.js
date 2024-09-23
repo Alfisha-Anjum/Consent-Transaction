@@ -131,11 +131,11 @@ const Main = () => {
   return (
     <>
       <div>
-        <div className="bg-blue-950 w-full h-20"></div>
+        <div className="bg-gradient-to-r from-[#89368f] to-[#3f4585] w-full h-20"></div>
 
         <div className=" bg-[#eeeeec]">
-          <div className="w-[80%] bg-[#eeeeec] h-[1200px] m-auto">
-            <div className="flex  items-center justify-end pr-28 gap-2 pt-3">
+          <div className="w-[80%] bg-[#eeeeec] m-auto">
+            <div className="flex  items-center lg:justify-start xl:justify-end pr-28 gap-2 pt-3">
               <div className="bg-white  rounded-full flex  px-4 py-[3px]  w-[65%]">
                 <input
                   type="text"
@@ -146,8 +146,8 @@ const Main = () => {
               </div>
               <FaInfoCircle className="text-lg" />
             </div>
-            <div className="flex gap-5 w-full">
-              <div className="bg-white w-[58%] h-[700px] rounded-md mt-5">
+            <div className="flex gap-7 w-[90%] m-auto">
+              <div className="bg-white w-[58%] rounded-md mt-5 ">
                 <div className="flex items-center justify-between px-5 py-3">
                   <h1 className="text-md font-semibold">Latest Operations</h1>
                   <h1 className="text-red-400 font-semibold text-md">
@@ -167,7 +167,7 @@ const Main = () => {
                     Time
                   </h1>
                 </div>
-                <hr className="w-[90%] m-auto" />
+                <div className="border-t-2 w-[90%] m-auto border-gray-300"></div>
 
                 {operationsData.map((operation, index) => (
                   <div key={index}>
@@ -184,17 +184,17 @@ const Main = () => {
                         {operation.time}
                       </h1>
                     </div>
-                    <hr className="w-[90%] m-auto" />
+                    <div className="border-t-[1px] w-[90%] m-auto border-black"></div>
                   </div>
                 ))}
               </div>
               <div className="flex flex-col">
-                <div className="bg-white w-full h-[170px] rounded-md mt-5">
+                <div className="bg-white   rounded-md mt-5">
                   <div className="flex items-center justify-between px-5 py-3">
                     <h1 className="text-md font-semibold">MAINNET METRICS</h1>
                   </div>
                   <div className="mt-2">
-                    <hr className="w-[90%] m-auto" />
+                    <div className="border-t-[1px] w-[90%] m-auto border-black"></div>
                     <div className="flex w-[90%] justify-between my-3 m-auto">
                       <h1 className="text-gray-800  text-[14px]">
                         Total Migrated Mining Rewards:
@@ -203,7 +203,7 @@ const Main = () => {
                         4036138806.1613917
                       </h1>
                     </div>
-                    <hr className="w-[90%] m-auto" />
+                    <div className="border-t-[1px] w-[90%] m-auto border-black"></div>
                     <div className="flex w-[90%] justify-between my-3 m-auto">
                       <h1 className="text-gray-800  text-[14px]">
                         Total Migrated Mining Rewards:
@@ -240,25 +240,25 @@ const Main = () => {
                     </h1>
                   </div>
 
-                  <hr className="w-[90%] m-auto" />
+                  <div className="border-t-2 w-[90%] m-auto border-gray-300"></div>
 
                   {transactionsData.map((transaction, index) => (
                     <div key={index} className="w-[100%] m-auto">
                       <div className="flex  pl-4 py-1">
-                        <h1 className="text-blue-700 text-sm w-[100px]">
+                        <h1 className="text-blue-700 text-sm w-[100px] hover:text-[#fbb44a]">
                           {transaction["#"]}
                         </h1>
-                        <h1 className="text-blue-700 text-sm w-[100px]">
+                        <h1 className="text-blue-700 text-sm w-[100px] hover:text-[#fbb44a]">
                           {transaction.block}
                         </h1>
-                        <h1 className="text-blue-700 text-sm w-[50px]">
+                        <h1 className="text-blue-700 text-sm w-[50px] hover:text-[#fbb44a]">
                           {transaction.ops}
                         </h1>
                         <h1 className="text-blue-700 text-sm w-[120px] hover:text-[#fbb44a]">
                           {transaction.time}
                         </h1>
                       </div>
-                      <hr className="w-[90%] m-auto" />
+                      <div className="border-t-[1px] w-[90%] m-auto border-black"></div>
                     </div>
                   ))}
                 </div>
@@ -283,12 +283,12 @@ const Main = () => {
                         Time
                       </h1>
                     </div>
-                    <hr className="w-[90%] m-auto" />
+                    <div className="border-t-2 w-[90%] m-auto border-gray-300"></div>
 
                     {blocksData.map((block, index) => (
                       <div key={index}>
-                        <div className="grid grid-cols-3 mt-3">
-                          <h1 className="text-blue-700  text-sm pl-4">
+                        <div className="grid grid-cols-3 py-1">
+                          <h1 className="text-blue-700  text-sm pl-4 hover:text-[#fbb44a]">
                             {block.id}
                           </h1>
                           <h1 className="text-gray-500  text-sm">
@@ -299,7 +299,7 @@ const Main = () => {
                             {block.time}
                           </h1>
                         </div>
-                        <hr className="w-[90%] m-auto" />
+                        <div className="border-t-[1px] w-[90%] m-auto border-black"></div>
                       </div>
                     ))}
                   </div>

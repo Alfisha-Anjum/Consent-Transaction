@@ -4,7 +4,7 @@ import { FaSearch, FaInfoCircle, FaCopy } from "react-icons/fa";
 const Blog = () => {
   return (
     <div>
-      <div className="bg-blue-950 w-full h-20"></div>
+      <div className="bg-gradient-to-r from-[#89368f] to-[#3f4585] w-full h-20"></div>
       <div className=" bg-[#eeeeec]">
         <div className="w-[60%] bg-[#eeeeec] h-[1200px] m-auto">
           <div className="flex pr-28 gap-2 pt-3 items-center">
