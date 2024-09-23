@@ -10,6 +10,8 @@ function App() {
   return (
     
     <div> 
+      <Main/>
+      <Blog/>
       <Transaction/>
     </div>
   );
