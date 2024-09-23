@@ -18,7 +18,7 @@ function Transaction() {
           <div className="w-[70%] h-screen p-2 space-y-8 ">
             <div className="w-full flex justify-end">
               <input
-                className="w-1/2 rounded-3xl text-sm outline-none border p-2"
+                className="w-1/2 rounded-3xl text-sm outline-none border p-1"
                 type="search"
                 placeholder="seach by Account / transitions"
               />
