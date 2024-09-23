@@ -264,6 +264,7 @@ const Main = () => {
                 </div>
 
 
+
                 <div className=" w-full">
                   <div className="bg-white w-[380px] h-[430px] rounded-md mt-5">
                     <div className="flex items-center justify-between px-5 py-3">
@@ -271,6 +272,7 @@ const Main = () => {
                       <h1 className="text-red-400 font-semibold text-md">
                         View All
                       </h1>
+
 
                     </div>
                     <div className="grid grid-cols-3">
@@ -305,7 +307,7 @@ const Main = () => {
                       </div>
                     ))}
                   </div>
-                </div> */}
+                </div> 
               </div>
             </div>
           </div>
