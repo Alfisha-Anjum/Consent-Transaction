@@ -5,10 +5,10 @@ const Blog = () => {
   return (
     <div>
       <div className="bg-gradient-to-r from-[#89368f] to-[#3f4585] w-full h-20"></div>
-      <div className=" bg-[#eeeeec]">
-        <div className="w-[60%] bg-[#eeeeec] h-[1200px] m-auto">
-          <div className="flex pr-28 gap-2 pt-3 items-center">
-            <div className="bg-white rounded-full flex px-4 py-[3px] w-[65%]">
+      <div className="bg-[#eeeeec]">
+        <div className="lg:w-[60%] w-[90%] bg-[#eeeeec] h-[1200px] m-auto">
+          <div className="flex sm:pr-28 gap-2 pt-3 items-center">
+            <div className="bg-white rounded-full flex px-4 py-[3px] lg:w-[65%] sm:w-[90%] w-full">
               <input
                 type="text"
                 placeholder="Search by Account / Transaction /..."
@@ -26,19 +26,23 @@ const Blog = () => {
                 JSON
               </div>
             </div>
-            <div className="flex gap-28 px-4 ">
+            <div className="md:flex gap-28 px-4 flex-wrap">
               <h1 className="text-[12px]">Public Key:</h1>
-              <div className="flex items-center ">
-                <h1 className="text-[12px] ">
+
+
+              <div className="flex items-center flex-wrap break-all">
+                <span className="text-[12px] inline-flex items-center">
+
                   GCYOG4UEEYGOCTUL6ZHWMUDOY4UK53BFNKPX2ZJTV72IMXYZHDGJJZZI
-                </h1>
-                <FaCopy className="text-gray-700 ml-2 cursor-pointer" />
+                  <FaCopy className="text-gray-700 ml-2 cursor-pointer" />
+                </span>
               </div>
             </div>
+
             <h1 className="pl-4 text-[12px]">Home Domain:</h1>
-            <div className="flex gap-20 pb-2">
+            <div className="md:flex flex-wrap gap-20 pb-2">
               <h1 className="pl-4 text-[12px]">Subentry Count:</h1>
-              <p className="text-[12px]">0</p>
+              <p className="pl-4 md:pl-0 text-[12px]">0</p>
             </div>
           </div>
 

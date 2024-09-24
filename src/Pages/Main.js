@@ -133,10 +133,10 @@ const Main = () => {
       <div>
         <div className="bg-gradient-to-r from-[#89368f] to-[#3f4585] w-full h-20"></div>
 
-        <div className=" bg-[#eeeeec]">
-          <div className="w-[80%] bg-[#eeeeec] m-auto">
-            <div className="flex  items-center lg:justify-start xl:justify-end pr-28 gap-2 pt-3">
-              <div className="bg-white  rounded-full flex  px-4 py-[3px]  w-[65%]">
+        <div className=" bg-[#eeeeec] ">
+          <div className="2xl:w-[80%] w-[100%] m-auto bg-[#eeeeec]">
+            <div className="flex items-center justify-end m-auto pr-28 sm:pr-16 pr-10 w-full gap-2 pt-3  ">
+              <div className="bg-white  rounded-full flex  px-4 py-[3px] w-[70%]">
                 <input
                   type="text"
                   placeholder="Search by Account / Transaction /..."
@@ -146,16 +146,17 @@ const Main = () => {
               </div>
               <FaInfoCircle className="text-lg" />
             </div>
-            <div className="flex gap-7 w-[90%] m-auto">
-              <div className="bg-white w-[58%] rounded-md mt-5 ">
+
+            <div className="flex flex-wrap lg:flex-nowrap gap-7 w-[90%] justify-center xl:w-[95%] m-auto">
+              <div className="bg-white xl:w-[58%] w-[90%] rounded-md mt-5 ">
                 <div className="flex items-center justify-between px-5 py-3">
                   <h1 className="text-md font-semibold">Latest Operations</h1>
                   <h1 className="text-red-400 font-semibold text-md">
                     View All
                   </h1>
                 </div>
-                <div className="flex w-full justify-between px-7 py-1 my-1">
-                  <div className="flex gap-20">
+                <div className="flex  w-full justify-between px-7 py-1 my-1">
+                  <div className="flex sm:gap-20 gap-5">
                     <h1 className="text-gray-400 font-semibold text-sm">
                       Accounts
                     </h1>
@@ -163,7 +164,7 @@ const Main = () => {
                       Operation
                     </h1>
                   </div>
-                  <h1 className="text-gray-400 font-semibold text-sm pr-36">
+                  <h1 className="text-gray-400 font-semibold text-sm  pr-16 sm:pr-36">
                     Time
                   </h1>
                 </div>
@@ -171,26 +172,33 @@ const Main = () => {
 
                 {operationsData.map((operation, index) => (
                   <div key={index}>
-                    <div className="flex w-full justify-between px-7 py-1 ">
-                      <div className="flex gap-20">
-                        <div className="bg-[#a34ea7]  text-white rounded-full px-2">
+                    <div className="flex w-full justify-between px-7 py-1">
+                      <div className="flex sm:gap-20 gap-5">
+                        <div className="bg-[#a34ea7] text-white rounded-full text-sm px-2">
                           {operation.account}
                         </div>
-                        <h1 className="text-gray-500  text-[13px] ">
+                        <h1 className="text-gray-500 text-[13px] hidden sm:block">
                           {operation.operation}
                         </h1>
+                        <h1 className="text-gray-500 text-[13px] sm:hidden">
+                          {operation.operation.length > 10
+                            ? `${operation.operation.slice(0, 10)}...`
+                            : operation.operation}
+                        </h1>
                       </div>
-                      <h1 className="text-blue-700  text-sm pr-20 hover:text-[#fbb44a]">
+
+                      <h1 className="text-blue-700 text-sm pr-2 sm:pr-20 hover:text-[#fbb44a]">
                         {operation.time}
                       </h1>
                     </div>
+
                     <div className="border-t-[1px] w-[90%] m-auto border-black"></div>
                   </div>
                 ))}
               </div>
-              <div className="flex flex-col">
-                <div className="bg-white   rounded-md mt-5">
-                  <div className="flex items-center justify-between px-5 py-3">
+              <div className="flex  flex-col w-[90%] lg:w-auto">
+                <div className="bg-white rounded-md mt-5 w-[100%]">
+                  <div className="flex items-center justify-between px-5 py-3 ">
                     <h1 className="text-md font-semibold">MAINNET METRICS</h1>
                   </div>
                   <div className="mt-2">
@@ -215,8 +223,8 @@ const Main = () => {
                     <hr className="w-[90%] m-auto" />
                   </div>
                 </div>
-                <div className="bg-white w-[380px] h-[450px] rounded-md mt-5 m-auto">
-                  <div className="w[-[90%] flex items-center justify-between px-5 py-3">
+                <div className="bg-white lg:w-[380px] w-full h-[450px] rounded-md mt-5 m-auto">
+                  <div className=" flex items-center justify-between px-5 py-3">
                     <h1 className="text-md font-semibold">
                       Latest Transactions
                     </h1>
@@ -225,8 +233,8 @@ const Main = () => {
                     </h1>
                   </div>
 
-                  <div className="flex gap-4 py-1">
-                    <h1 className="text-gray-500 font-semibold text-sm w-[100px] pl-4">
+                  <div className="lg:flex grid grid-cols-5 pl-4 sm:pl-12 lg:pl-0 gap-4 py-1">
+                    <h1 className="text-gray-500 font-semibold text-sm w-[100px] lg:pl-4">
                       #
                     </h1>
                     <h1 className="text-gray-500 font-semibold text-sm w-[100px]">
@@ -244,12 +252,23 @@ const Main = () => {
 
                   {transactionsData.map((transaction, index) => (
                     <div key={index} className="w-[100%] m-auto">
-                      <div className="flex  pl-4 py-1">
-                        <h1 className="text-blue-700 text-sm w-[100px] hover:text-[#fbb44a]">
+                      <div className="lg:flex grid grid-cols-5 pl-4 sm:pl-12 lg:pl-4 py-1">
+                        <h1 className="text-blue-700 text-sm w-[100px] hidden sm:block hover:text-[#fbb44a]">
                           {transaction["#"]}
                         </h1>
-                        <h1 className="text-blue-700 text-sm w-[100px] hover:text-[#fbb44a]">
+                        <h1 className="text-blue-700 text-sm sm:hidden hover:text-[#fbb44a]">
+                          {transaction["#"] && transaction["#"].length > 3
+                            ? `${transaction["#"].slice(0, 3)}...`
+                            : transaction["#"]}
+                        </h1>
+
+                        <h1 className="text-blue-700 text-sm w-[100px] hidden sm:block hover:text-[#fbb44a]">
                           {transaction.block}
+                        </h1>
+                        <h1 className="text-blue-700 text-sm sm:hidden">
+                          {transaction.block && transaction.block.length > 3
+                            ? `${transaction.block.slice(0, 3)}...`
+                            : transaction.block}
                         </h1>
                         <h1 className="text-blue-700 text-sm w-[50px] hover:text-[#fbb44a]">
                           {transaction.ops}
@@ -263,17 +282,13 @@ const Main = () => {
                   ))}
                 </div>
 
-
-
                 <div className=" w-full">
-                  <div className="bg-white w-[380px] h-[430px] rounded-md mt-5">
+                  <div className="bg-white lg:w-[380px] w-full h-[430px] rounded-md mt-5">
                     <div className="flex items-center justify-between px-5 py-3">
                       <h1 className="text-md font-semibold">Latest Blocks</h1>
                       <h1 className="text-red-400 font-semibold text-md">
                         View All
                       </h1>
-
-
                     </div>
                     <div className="grid grid-cols-3">
                       <h1 className="text-gray-500 font-semibold text-md pl-4">
@@ -307,7 +322,7 @@ const Main = () => {
                       </div>
                     ))}
                   </div>
-                </div> 
+                </div>
               </div>
             </div>
           </div>
