@@ -28,8 +28,8 @@ const Blog = () => {
             </div>
             <div className="flex gap-28 px-4 ">
               <h1 className="text-[12px]">Public Key:</h1>
-              <div className="flex items-center">
-                <h1 className="text-[12px]">
+              <div className="flex items-center ">
+                <h1 className="text-[12px] ">
                   GCYOG4UEEYGOCTUL6ZHWMUDOY4UK53BFNKPX2ZJTV72IMXYZHDGJJZZI
                 </h1>
                 <FaCopy className="text-gray-700 ml-2 cursor-pointer" />

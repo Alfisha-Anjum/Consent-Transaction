@@ -7,8 +7,8 @@ function Transaction() {
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <div className="bg-blue-950 w-full h-20 flex  justify-end items-center gap-2 px-32">
-          <button className="text-white text-sm border h-6 text-center px-3 rounded-xl ">
+        <div className="bg-blue-950 w-full h-20 flex  justify-end items-center gap-2 px-8 sm:px-20 lg:px-32">
+          <button className="text-white text-sm border h-6 text-center px-3  rounded-xl ">
             TESTNET
           </button>
           <button className="text-white text-sm bg-orange-400 h-6 text-center px-3 rounded-xl ">
@@ -19,7 +19,7 @@ function Transaction() {
         <div className=" bg-[#eeeeec] w-full flex justify-center ">
           <div className="w-[80%] h-screen py-8 space-y-8 ">
             <div className="flex  items-center  justify-end  gap-2 pt-3">
-              <div className="bg-white  rounded-full flex  px-4 py-1  w-[47%]">
+              <div className="bg-white  rounded-full flex  px-4 sm:px-2 py-1  w-[70%] sm:w-[47%]">
                 <input
                   type="text"
                   placeholder="Search by Account / Transaction /..."
@@ -30,14 +30,14 @@ function Transaction() {
               <FaInfoCircle />
             </div>
 
-            <div className="w-full px-3 py-4  bg-white">
+            <div className="w-full sm:px-3  py-4  bg-white">
               <div className="mb-5 text-sm flex items-center space-x-1">
                 <span className="font-bold text-lg "> TRANSACTION </span>
-                <span className="text-sm font-medium text-gray-400 leading-5 tracking-[1px]">
+                <span className="text-sm font-medium text-gray-400 leading-5 tracking-[1px] overflow-x-auto">
                   DJKSDJKJJKJJHJHHKKLKJLJJMNMNBHJFTYEWASZXCBCBNMNKH
                 </span>
 
-                <HiClipboardCopy />
+                <HiClipboardCopy className=" text-3xl sm:text-lg" />
               </div>
               <div className="w-full py-2 flex border-t text-sm ">
                 <div className="w-1/2 ">Time </div>
