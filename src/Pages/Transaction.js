@@ -19,7 +19,7 @@ function Transaction() {
         <div className=" bg-[#eeeeec] w-full flex justify-center ">
           <div className="w-[80%] h-screen py-8 space-y-8 ">
             <div className="flex  items-center  justify-end  gap-2 pt-3">
-              <div className="bg-white  rounded-full flex  px-4 sm:px-2 py-1  w-[70%] sm:w-[47%]">
+              <div className="bg-white  rounded-full flex  px-4 sm:px-2 py-1  w-full sm:w-[47%]">
                 <input
                   type="text"
                   placeholder="Search by Account / Transaction /..."
@@ -30,16 +30,17 @@ function Transaction() {
               <FaInfoCircle />
             </div>
 
-            <div className="w-full sm:px-3  py-4  bg-white">
-              <div className="mb-5 text-sm flex items-center space-x-1">
+            <div className="w-full px-3  py-4  bg-white">
+              <div className="mb-5 text-sm sm:flex  space-x-1 ">
                 <span className="font-bold text-lg "> TRANSACTION </span>
-                <span className="text-sm font-medium text-gray-400 leading-5 tracking-[1px] overflow-x-auto">
+                <span className="text-sm font-medium flex  items-center text-gray-400 leading-5 tracking-[1px] break-all">
                   DJKSDJKJJKJJHJHHKKLKJLJJMNMNBHJFTYEWASZXCBCBNMNKH
+                  <HiClipboardCopy className="text-xl " />
                 </span>
 
-                <HiClipboardCopy className=" text-3xl sm:text-lg" />
+                
               </div>
-              <div className="w-full py-2 flex border-t text-sm ">
+              <div className="w-full  py-2 flex border-t text-sm ">
                 <div className="w-1/2 ">Time </div>
                 <div className="w-1/2 ">19/212024 11:32 Am</div>
               </div>
@@ -53,7 +54,7 @@ function Transaction() {
               </div>
               <div className="w-full py-2 flex border-t  ">
                 <div className="w-1/2 text-sm">Memo (none)</div>
-                <div className="w-1/2 text-sm">f</div>
+                <div className="w-1/2 text-sm"></div>
               </div>
             </div>
 
