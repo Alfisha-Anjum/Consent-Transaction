@@ -29,8 +29,10 @@ const Blog = () => {
             <div className="md:flex gap-28 px-4 flex-wrap">
               <h1 className="text-[12px]">Public Key:</h1>
 
+
               <div className="flex items-center flex-wrap break-all">
                 <span className="text-[12px] inline-flex items-center">
+
                   GCYOG4UEEYGOCTUL6ZHWMUDOY4UK53BFNKPX2ZJTV72IMXYZHDGJJZZI
                   <FaCopy className="text-gray-700 ml-2 cursor-pointer" />
                 </span>

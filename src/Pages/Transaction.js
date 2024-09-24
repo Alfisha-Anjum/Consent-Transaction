@@ -1,68 +1,77 @@
 import React from "react";
-import { CiSearch } from "react-icons/ci";
+import { FaSearch } from "react-icons/fa";
+import { FaInfoCircle } from "react-icons/fa";
+import { HiClipboardCopy } from "react-icons/hi";
 
 function Transaction() {
   return (
     <>
       <div className="flex flex-col justify-center items-center">
-        <div className="bg-blue-950 w-full h-20 flex justify-end items-center gap-2 p-2">
-          <button className=" bg-orange-400 h-6 text-center px-3 rounded-xl ">
+        <div className="bg-blue-950 w-full h-20 flex  justify-end items-center gap-2 px-8 sm:px-20 lg:px-32">
+          <button className="text-white text-sm border h-6 text-center px-3  rounded-xl ">
             TESTNET
           </button>
-          <button className=" bg-orange-400 h-6 text-center px-3 rounded-xl ">
-            TESTNET
+          <button className="text-white text-sm bg-orange-400 h-6 text-center px-3 rounded-xl ">
+            MAINNET
           </button>
         </div>
 
         <div className=" bg-[#eeeeec] w-full flex justify-center ">
-          <div className="w-[70%] h-screen p-2 space-y-8 ">
-            <div className="w-full flex justify-end">
-              <input
-                className="w-1/2 rounded-3xl text-sm outline-none border p-1"
-                type="search"
-                placeholder="seach by Account / transitions"
-              />
-              <CiSearch />
+          <div className="w-[80%] h-screen py-8 space-y-8 ">
+            <div className="flex  items-center  justify-end  gap-2 pt-3">
+              <div className="bg-white  rounded-full flex  px-4 sm:px-2 py-1  w-[70%] sm:w-[47%]">
+                <input
+                  type="text"
+                  placeholder="Search by Account / Transaction /..."
+                  className="w-full font-semibold outline-none text-[12px]"
+                />
+                <FaSearch className="text-gray-700 mt-[2px] text-sm" />
+              </div>
+              <FaInfoCircle />
             </div>
 
-            <div className="w-full space-y-3 p-4 bg-white">
-              <div className="">
-                <span className="font-bold text-xl"> tansaction</span>{" "}
-                <span className="text-sm">1234567890ahjdffgkbjskdcvdknln</span>
+            <div className="w-full sm:px-3  py-4  bg-white">
+              <div className="mb-5 text-sm flex items-center space-x-1">
+                <span className="font-bold text-lg "> TRANSACTION </span>
+                <span className="text-sm font-medium text-gray-400 leading-5 tracking-[1px] overflow-x-auto">
+                  DJKSDJKJJKJJHJHHKKLKJLJJMNMNBHJFTYEWASZXCBCBNMNKH
+                </span>
+
+                <HiClipboardCopy className=" text-3xl sm:text-lg" />
               </div>
-              <div className="w-full  flex border-t ">
-                <div className="w-1/2 p-1">Time </div>
-                <div className="w-1/2 p-1">19/212024 11:32Am</div>
+              <div className="w-full py-2 flex border-t text-sm ">
+                <div className="w-1/2 ">Time </div>
+                <div className="w-1/2 ">19/212024 11:32 Am</div>
               </div>
-              <div className="w-full  flex border-t ">
-                <div className="w-1/2 p-1">Free </div>
-                <div className="w-1/2 p-1">0.01 pi</div>
+              <div className="w-full py-2 flex border-t ">
+                <div className="w-1/2 text-sm ">Free </div>
+                <div className="w-1/2 text-sm ">0.01 pi</div>
               </div>
-              <div className="w-full  flex border-t ">
-                <div className="w-1/2 p-1">Block </div>
-                <div className="w-1/2 p-1">16824496</div>
+              <div className="w-full py-2 flex border-t ">
+                <div className="w-1/2 text-sm ">Block </div>
+                <div className="w-1/2 text-sm text-blue-700">16824496</div>
               </div>
-              <div className="w-full  flex border-t  ">
-                <div className="w-1/2 p-1">Memo(none)</div>
-                <div className="w-1/2 p-1">f</div>
+              <div className="w-full py-2 flex border-t  ">
+                <div className="w-1/2 text-sm">Memo (none)</div>
+                <div className="w-1/2 text-sm">f</div>
               </div>
             </div>
 
             <div className="">
-              <div className="text-2xl">Opeations(1)</div>
-              <div className="flex w-full justify-around ">
-                <p>Operation</p>
-                <p>Time</p>
-                </div>
-              <div className="h-8 p-2 py-1 w-full bg-white flex  items-center">
-
-                <button className="bg-violet-600 h-7 rounded-xl px-2 ">GA3c</button>
+              <div className="text-2xl ">Opeations(1)</div>
+              <div className="flex w-full justify-around mb-1 text-gray-400">
+                <p className="text-sm">Operation</p>
+                <p className="text-sm">Time</p>
+              </div>
+              <div className="h-8 px-1 py-3 w-full bg-white flex  items-center">
+                <button className="bg-violet-600  rounded-xl px-2 py-0.5 text-xs text-white">
+                  GA3C
+                </button>
                 <div className="flex justify-around w-full">
-                  <span className="">Pay 200 pi to GCCI</span>
-                  <span className="">5 Secound Ago</span>
+                  <span className="text-sm">Pay 200 pi to GCCI</span>
+                  <span className="text-xs text-blue-600">5 Seconds Ago</span>
                 </div>
               </div>
-              
             </div>
           </div>
         </div>
