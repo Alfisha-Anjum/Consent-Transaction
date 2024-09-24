@@ -135,7 +135,7 @@ const Main = () => {
 
         <div className=" bg-[#eeeeec] ">
           <div className="2xl:w-[80%] w-[100%] m-auto bg-[#eeeeec]">
-            <div className="flex items-center justify-end m-auto pr-28 sm:pr-16 pr-10 w-full gap-2 pt-3  ">
+            <div className="flex items-center justify-end m-auto xl:pr-28 sm:pr-16 pr-10 w-full gap-2 pt-3  ">
               <div className="bg-white  rounded-full flex  px-4 py-[3px] w-[70%]">
                 <input
                   type="text"
